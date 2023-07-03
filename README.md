@@ -8,6 +8,28 @@ Mildew Detection in Cherry Leaves is a study showing how to visually differentia
 
 ---
 
+## Table of contents
+
+- [Image Identification](#image-identification)
+  - [Mildew Detection in Cherry Leaves](#mildew-detection-in-cherry-leaves)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypotheses and Validation Methods](#hypotheses-and-validation-methods)
+  - [The Rationale to Map the Business Requirements](#the-rationale-to-map-the-business-requirements)
+  - [ML Business Case](#ml-business-case)
+  - [Dashboard Design](#dashboard-design)
+    - [Project Summary](#project-summary)
+    - [Leaf Visualiser](#leaf-visualiser)
+    - [Mildew Detection](#mildew-detection)
+    - [Project Hypotheses](#project-hypotheses)
+    - [ML Performance Metrics](#ml-performance-metrics)
+- [Unfixed bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Data Analysis and Machine Learning Libraries](#data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+
+---
+
 ## Dataset Content
 
 The main contents of the dataset are disussed in this section.
@@ -78,49 +100,118 @@ The business requirements of image identification and a rationale to map them to
 ---
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-* Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
 
+## Streamlit App User Interface
+
+The dashboard is consisted of five pages provided below.
+
+### Project Summary
+
+This page will provide general information about the project, dataset used for data visualization and prediction, link for the additional information, and business requirements.
+
+- **General Information**
+  - [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is a fungal disease that affects a wide range of plants, and can result in a low fruit yield in the case of Cherry Trees. This disease is caused by many different species of ascomycete fungi in the order Erysiphales. Powdery mildew is one of the easier plant diseases to identify, as its symptoms are quite distinctive. Infected plants display white powdery spots on the leaves and stems.
+  - Currently, the process is to manually verify if a given cherry tree contains powdery mildew or not. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or contains powdery mildew.
+- **Project Dataset**
+  - The available dataset contains +4 thousand images of cherry leaves taken from the client's crop fields:
+  - 2104 images of cherry leaves which are healthy
+  - 2104 images of cherry leaves containing powdery mildew
+  - For additional information about the dataset, please visit [Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
+- **Link to additional information**
+  - Link will be provided for the additional information about the project.
+- **Business requirements**
+  The project has two business requirements:<br>
+  - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+  - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+### Leaf Visualiser
+
+This page will provide the details for the answer to business requirement 1- "The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew."<br>
+
+- Checkbox 1 - Difference between average and variability image
+- Checkbox 2 - Differences between average infected and average uninfected leaves.
+- Checkbox 3 - Image Montage
+
+### Mildew Detection
+
+This page will provide information about business requirement 2- "The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."<br>
+
+- Link to download a set of infected and uninfected leaves for live prediction.
+- User Interface with a file uploader widget. The user should upload multiple leaf sample images. It will display the image and a prediction statement, indicating if the leaf is infected or not with powdery mildew and the probability associated with this statement.
+- Table with image name and prediction results.
+- Download button to download table.
+
+### Project Hypotheses
+
+This page will provide block for each project hypothesis, conclusions, and methods used to validate the hypothesis.
+
+### ML Performance Metrics
+
+This page will provide the details for the answer to business requirement 2.<br>
+
+- Label Frequencies for Train, Validation, and Test Sets
+- Model History - Accuracy and Losses
+- Model evaluation result
+
+---
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
-## Deployment
-### Heroku
+- No unfixed bugs
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+[Back to Table of contents](#table-of-contents)
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+---
 
+# Deployment
 
-## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+- The Image Identification was deployed using Code Institute's mock terminal for Heroku.
 
+## Heroku
 
-## Credits 
+The steps for deployment were as follows:
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+1. Fork or clone this repository
+2. Log in to Heroku and create an App
+3. At the Deploy tab, select GitHub as the deployment method.
+4. Select your repository name and click Search. Once it is found, click Connect.
+5. Select the branch to be deployed, then click Deploy Branch.
+6. The deployment process should happen smoothly if all deployment files are fully functional
+7. Click now the button Open App on the top of the page to access your App.
 
-### Content 
+## [View live website](https://project-5.herokuapp.com/)
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+---
 
-### Media
+# Data Analysis and Machine Learning Libraries
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
+- Main list of the libraries used in the project and some example(s) of how these libraries were used.
 
+---
 
+# Credits
 
-## Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
+To complete the contents of Image Identification: Mildew Detection in Cherry Leaves, I learned coding and collected the information from different sources.
+
+- Learned Python coding from [Code Institute](https://learn.codeinstitute.net/)
+- Used Code Institute student template [template](Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves)
+- Collected information on good and bad coding practices from:
+  - [Documenting Python Code](https://realpython.com/documenting-python-code/)
+- The description on the malaria detection in blood cells provided by the tutor of the Code Institute with [Malaria Detection](Code-Institute-Solutions/WalkthroughProject01) and app [Malaria Detector](https://malaria-predictor.onrender.com/) was useful as well as an inspiration to design [Image Identification](https://github.com/HumaIlyas/mildew-detection-image-identification).
+- The information on how to build keras tuning model for hyperparameter optimization was collected from [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner) and [KerasTuner](https://keras.io/keras_tuner/)
+
+## Content
+
+- The cherry with leaf icon in the dashboard.py file was taken from [Cherry Emoji](https://emojicombos.com/cherry).
+- The details about the powdery mildew were found at [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew)
+
+## Media
+
+- The images used on the Home and News Categories pages for logo and news posts were taken from [Google Images](https://images.google.nl/)
+
+## Acknowledgements
+
+- I acknowledge all the tutors and fellow students at [Slack](https://app.slack.com/client/T0L30B202/D03PENWED0F) for their guidance and assistance to complete Image Identification.
+- I acknowledge [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for mentor support and finishing touches.
+
+[Back to Table of contents](#table-of-contents)
