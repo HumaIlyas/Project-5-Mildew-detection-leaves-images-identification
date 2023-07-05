@@ -31,8 +31,7 @@ def page_project_summary_content():
 
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/HumaIlyas/Project-5-Mildew- "
-        f"detection-leaves-images-identification/blob/main/README.md).")
+        f"[Project README file](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
 
     st.success(
         f"**Business requirements**\n"
