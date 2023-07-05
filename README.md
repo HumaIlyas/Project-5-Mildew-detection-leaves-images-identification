@@ -207,7 +207,7 @@ To complete the contents of Image Identification: Mildew Detection in Cherry Lea
 
 ## Media
 
-- The images used on the Home and News Categories pages for logo and news posts were taken from [Google Images](https://images.google.nl/)
+- The images used were taken from [Google Images](https://images.google.nl/)
 
 ## Acknowledgements
 
