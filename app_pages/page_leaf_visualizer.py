@@ -26,12 +26,12 @@ def page_leaf_visualizer_content():
         avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
         avg_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
-        # Warning message
-        st.warning(
-            f"* The average and variability images did not show patterns to "
-            f"intuitively differentiate one from another. However, a small "
-            f"difference in the colour pigment of the average and variability "
-            f"images is seen for both labels.")
+        # Information message
+        st.info(
+            f"* The average and variability images show patterns to intuitively "
+            f"differentiate one from another. In addition, a small difference in "
+            f"the colour pigment of the average and variability images is seen "
+            f"for both labels.")
 
         st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(avg_mildew, caption='Infected Leaf - Average and Variability')
@@ -41,10 +41,12 @@ def page_leaf_visualizer_content():
     if st.checkbox("Differences between average healthy and average infected Leaves."):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
-        # Warning message
-        st.warning(
-            f"* This study didn't show patterns to intuitively differentiate "
-            f"average healthy and average infected leaves from another.")
+        # Information message
+        st.info(
+            f"* This study show patterns to intuitively differentiate average "
+            f"healthy and average infected leaves from another. However, difference "
+            f"between averages studies did not reveal any clear pattern to differentiate "
+            f"one from another.")
         st.image(diff_between_avgs, caption='Difference between average images')
 
     # Checkbox for image montage

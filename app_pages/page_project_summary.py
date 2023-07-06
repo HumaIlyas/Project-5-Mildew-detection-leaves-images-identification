@@ -20,22 +20,22 @@ def page_project_summary_content():
         f"tree contains powdery mildew or not. An employee spends around 30 "
         f"minutes in each tree, taking a few samples of tree leaves and "
         f"verifying visually if the leaf tree is healthy or contains powdery "
-        f"mildew."
-        f"**Project Dataset**\n"
-        f"* The available dataset contains 4+ thousand images of cherry "
+        f"mildew.\n\n"
+        f"**Project Dataset**\n\n"
+        f" The available dataset contains 4+ thousand images of cherry "
         f"leaves taken from the client's crop fields: \n"
         f"* 2104 images of cherry leaves which are healthy \n"
         f"* 2104 images of cherry leaves containing powdery mildew \n"
         f"* For additional information about the dataset, please visit "
-        f"[Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
+        f"[Dataset Cherry Leaves](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
 
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
+        f"[Project README Document](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
 
     st.success(
-        f"**Business requirements**\n"
-        f"* The project has two business requirements:\n"
+        f"**Business requirements**\n\n"
+        f" The project has two business requirements:\n"
         f"* The client is interested in conducting a study to visually "
         f"differentiate a cherry leaf that is healthy from one that contains "
         f"powdery mildew.\n"
