@@ -4,7 +4,7 @@
 
 Mildew Detection in Cherry Leaves is a study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew, and also the capability to predict if a cherry leaf is healthy or contains powdery mildew. [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is a fungal disease that affects a wide range of plants, and is caused by many different species of ascomycete fungi in the order Erysiphales. Powdery mildew is one of the easier plant diseases to identify, as its symptoms are quite distinctive. Infected plants display white powdery spots on the leaves and stems.
 
-## [View live website](https://project-5.herokuapp.com/)
+## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
 
 ---
 
@@ -62,9 +62,9 @@ Project hypotheses and the methods to validate them are described below. The det
 
 - The dataset will be analysed using train, validation, and test techniques to investigate the accuracy of image identification.
 
-3- The sample dataset contains images classified as infected and uninfected leaves.
+3- I suggest that binary classification will be the best method to determine the difference between infected and uninftected leaves, considering that the sample dataset contains images classified as infected and uninfected leaves.
 
-- The binary classification will be the best method to determine the difference between infected and uninftected leaves.
+- The binary classification will be done to determine the difference between infected and uninftected leaves.
 
 ---
 
@@ -179,14 +179,27 @@ The steps for deployment were as follows:
 6. The deployment process should happen smoothly if all deployment files are fully functional
 7. Click now the button Open App on the top of the page to access your App.
 
-## [View live website](https://project-5.herokuapp.com/)
+## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
 
 ---
 
 # Data Analysis and Machine Learning Libraries
 
-- Main list of the libraries used in the project and some example(s) of how these libraries were used.
-
+- Main list of the libraries used in the project and some examples of how these libraries were used.
+* numpy
+* pandas
+* matplotlib
+* seaborn
+* plotly
+* streamlit
+* scikit-learn
+* tensorflow-cpu
+* keras
+* keras-tuner
+* protobuf
+**matplotlib** is used to plot graphs
+**streamlit** is used to design the dashboard
+**keras-tuner** is used to to create Keras tuning model
 ---
 
 # Credits
@@ -204,10 +217,6 @@ To complete the contents of Image Identification: Mildew Detection in Cherry Lea
 
 - The cherry with leaf icon in the dashboard.py file was taken from [Cherry Emoji](https://emojicombos.com/cherry).
 - The details about the powdery mildew were found at [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew)
-
-## Media
-
-- The images used were taken from [Google Images](https://images.google.nl/)
 
 ## Acknowledgements
 
