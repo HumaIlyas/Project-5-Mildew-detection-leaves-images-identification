@@ -12,10 +12,11 @@ def page_project_hypotheses_content():
         "their surface to differentiate them from the uninfected leaves. \n"
         "* An average image and varability image study can help to "
         "investigate it. \n"
-        "* There were clear white powdery spots on the surface of the mildew "
-        "contained leaves. \n"
         "* An Image Montage shows that typically a mildew contained leaves "
-        "have clear white powdery spots on the surface.")
+        "have clear white powdery spots on the surface. \n"
+        "* Average Image, Variability Image and Difference between Averages "
+        "studies did not reveal any clear pattern to differentiate one from "
+        "another.")
     st.write("#### Hypothesis 2")
     st.info(
         "I suggest that images of mildew-contained cherry leaves will have "
@@ -27,9 +28,11 @@ def page_project_hypotheses_content():
         "validated, and tested using the available image dataset.")
     st.write("#### Hypothesis 3")
     st.info(
-        "The sample dataset contains images classified as infected and "
-        "uninfected leaves. \n"
-        "* The binary classification will be the best way to determine the "
+        "I suggest that binary classification will be the best method to determine "
+        "the difference between infected and uninftected leaves, considering that "
+        "the sample dataset contains images classified as infected and uninfected "
+        "leaves. \n"
+        "* The binary classification will be done to determine the "
         "difference between infected and uninftected leaves. \n"
         "* The difference between healthy and mildew-contained cherry leaves "
         "was well determined using binary classification.")

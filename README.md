@@ -65,6 +65,7 @@ Project hypotheses and the methods to validate them are described below. The det
 3- I suggest that binary classification will be the best method to determine the difference between infected and uninftected leaves, considering that the sample dataset contains images classified as infected and uninfected leaves.
 
 - The binary classification will be done to determine the difference between infected and uninftected leaves.
+- The images will be uploaded in the dashboard to determine the difference between infected and uninftected leaves. 
 
 ---
 
