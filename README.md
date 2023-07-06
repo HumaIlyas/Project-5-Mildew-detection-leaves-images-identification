@@ -185,7 +185,7 @@ The steps for deployment were as follows:
 
 # Data Analysis and Machine Learning Libraries
 
-- Main list of the libraries used in the project and some examples of how these libraries were used.
+Main list of the libraries used in the project of Image Identification and some examples of how these libraries were used is provided below.
 * numpy
 * pandas
 * matplotlib
@@ -197,9 +197,11 @@ The steps for deployment were as follows:
 * keras
 * keras-tuner
 * protobuf
-**matplotlib** is used to plot graphs
-**streamlit** is used to design the dashboard
-**keras-tuner** is used to to create Keras tuning model
+
+**matplotlib** is used to plot graphs<br>
+**streamlit** is used to design the dashboard for mildew detector app<br>
+**keras-tuner** is used to to create Keras tuning model for hyperparameter optimization
+
 ---
 
 # Credits
