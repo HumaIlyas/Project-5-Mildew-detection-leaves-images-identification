@@ -54,8 +54,7 @@ def page_leaf_visualizer_content():
         st.write("* To refresh the montage, click on the 'Create Montage' button")
         my_data_dir = 'inputs/mildew_dataset/cherry-leaves'
         labels = os.listdir(my_data_dir + '/validation')
-        label_to_display = st.selectbox(
-            label="Select label", options=labels, index=0)
+        label_to_display = st.selectbox(label="Select label", options=labels, index=0)
         if st.button("Create Montage"):
             image_montage(dir_path=my_data_dir + '/validation',
                           label_to_display=label_to_display,
