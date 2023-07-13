@@ -16,10 +16,10 @@ def page_leaf_visualizer_content():
     """
     st.write("### Leaf Visualiser")
     st.info(
+        f"**Business Requirement 1** \n"
         f"* The client is interested in conducting a study to visually "
         f"differentiate a healthy cherry leaf from one that contains powdery "
-        f"mildew."
-    )
+        f"mildew.")
     version = 'v1'
     # Checkbox for the difference betweeen average and variability image
     if st.checkbox("Difference betweeen average and variability image"):

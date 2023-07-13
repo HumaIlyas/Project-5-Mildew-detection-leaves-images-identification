@@ -35,7 +35,7 @@ def page_project_hypotheses_content():
         f"* ML model performance matrics show that model was trained, "
         f"validated, and tested using the available image dataset. \n"
         f"* ML model performance was evaluated and it differentiates a mildew "
-        f" contained leaf and a healthy leaf with at least 97% accuracy in "
+        f"contained leaf and a healthy leaf with at least 97% accuracy in "
         f"both the train and test sets.")
     st.write("#### Hypothesis 3")
     st.info(
