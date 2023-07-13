@@ -3,6 +3,9 @@
 ## Mildew Detection in Cherry Leaves
 
 Mildew Detection in Cherry Leaves is a study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew, and also the capability to predict if a cherry leaf is healthy or contains powdery mildew. [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is a fungal disease that affects a wide range of plants, and is caused by many different species of ascomycete fungi in the order Erysiphales. Powdery mildew is one of the easier plant diseases to identify, as its symptoms are quite distinctive. Infected plants display white powdery spots on the leaves and stems.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/different-screen-sizes.jpg" alt="App on different screen sizes">
+</div>
 
 ## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
 
@@ -23,6 +26,7 @@ Mildew Detection in Cherry Leaves is a study showing how to visually differentia
     - [Mildew Detection](#mildew-detection)
     - [Project Hypotheses](#project-hypotheses)
     - [ML Performance Metrics](#ml-performance-metrics)
+- [Issues found during site development and deployment](#issues-found-during-site-development-and-deployment)
 - [Unfixed bugs](#unfixed-bugs)
 - [Deployment](#deployment)
 - [Data Analysis and Machine Learning Libraries](#data-analysis-and-machine-learning-libraries)
@@ -156,9 +160,23 @@ This page will provide the details for the answer to business requirement 2.<br>
 
 ---
 
+## Issues found during site development and deployment
+The following issues were found during site development and deployment<br>
+- To deploy Mildew Detector on Heroku, the stack by default did not support the Python version used to develop the app.<br>
+I adjusted this issue:
+   * By changing the stack of my project from 22 to 20
+
+- The slug size was also too large. 
+I adjusted this issue:
+   * By adding the extra large files in .slugignore file
+
+---
+
+---
+
 ## Unfixed Bugs
 
-- No unfixed bugs
+- There are no unfixed bugs
 
 [Back to Table of contents](#table-of-contents)
 
@@ -170,15 +188,21 @@ This page will provide the details for the answer to business requirement 2.<br>
 
 ## Heroku
 
-The steps for deployment were as follows:
-
+The steps for deployment are as follows:
 1. Fork or clone this repository
 2. Log in to Heroku and create an App
-3. At the Deploy tab, select GitHub as the deployment method.
+3. At the Deploy tab, select GitHub as the deployment method
 4. Select your repository name and click Search. Once it is found, click Connect.
 5. Select the branch to be deployed, then click Deploy Branch.
 6. The deployment process should happen smoothly if all deployment files are fully functional
 7. Click now the button Open App on the top of the page to access your App.
+
+In case of need to change to stack-20 in Heroku will be done by:
+1.	In Heroku click on Account Settings (under the avatar menu) on the Heroku Dashboard.
+2.	Scroll down to the API Key section and click Reveal. Copy the key.
+3.	Back in your IDE workspace, enter the following command in the terminal: heroku login -i , and enter your email then API key that you copied when prompted.
+4.	Then use the command heroku stack:set heroku-20 -a <the_name_of_your_app>
+5.	Now deploy again in the Heroku app
 
 ## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
 
@@ -187,21 +211,19 @@ The steps for deployment were as follows:
 # Data Analysis and Machine Learning Libraries
 
 Main list of the libraries used in the project of Image Identification and some examples of how these libraries were used is provided below.
-* numpy
-* pandas
-* matplotlib
-* seaborn
-* plotly
-* streamlit
-* scikit-learn
-* tensorflow-cpu
-* keras
-* keras-tuner
-* protobuf
-
-**matplotlib** is used to plot graphs<br>
-**streamlit** is used to design the dashboard for mildew detector app<br>
-**keras-tuner** is used to to create Keras tuning model for hyperparameter optimization
+* **numpy:** It is an open-source, python library used for working with arrays. NumPy offers comprehensive mathematical functions, random number generators, linear algebra routines.
+* **pandas:** It is an open-source, python package used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data.
+* **matplotlib:** It is a cross-platform, data visualization and graphical plotting library for python.
+* **seaborn:** It is Python data visualization library based on Matplotlib. It will be used to visualize random distributions.
+* **plotly:** It is an interactive, open-soource, and browser-based gra6. Tensorflow: It is an open-sourec machine learning platform focused on deep neural networks.phing library. Used to create visualisations within Jupyter notebooks to present the data.
+* **streamlit:** It is used to create web apps for data science and machine learnin
+* **scikit-learn:**
+* **tensorflow-cpu:** It is an open-source machine learning platform focused on deep neural networks.
+* **keras:**
+* **keras-tuner:** is used to to create Keras tuning model for hyperparameter optimization
+* **protobuf:**
+* **Joblib:** It is a set of tools to provide lightweighting pipelining in Python.
+* **PIL:** Python Imaging Library is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats.
 
 ---
 
