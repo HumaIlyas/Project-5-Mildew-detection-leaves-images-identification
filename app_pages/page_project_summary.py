@@ -6,6 +6,8 @@ def page_project_summary_content():
     Contents of Project Summary
     """
     st.write("### Project Summary")
+
+    # General information about the project
     st.info(
         f"**General Information**\n"
         f"* [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is "
@@ -20,24 +22,31 @@ def page_project_summary_content():
         f"tree contains powdery mildew or not. An employee spends around 30 "
         f"minutes in each tree, taking a few samples of tree leaves and "
         f"verifying visually if the leaf tree is healthy or contains powdery "
-        f"mildew.\n\n"
+        f"mildew.")
+
+    # Information about project dataset
+    st.warning(
         f"**Project Dataset**\n\n"
         f" The available dataset contains 4+ thousand images of cherry "
         f"leaves taken from the client's crop fields: \n"
+        f"* The images dataset has been split evenly with healthy and mildew "
+        f"contained cherry leaves. \n"
         f"* 2104 images of cherry leaves which are healthy \n"
         f"* 2104 images of cherry leaves containing powdery mildew \n"
-        f"* For additional information about the dataset, please visit "
-        f"[Dataset Cherry Leaves](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
-
-    st.write(
-        f"* For additional information, please visit and **read** the "
-        f"[Project README Document](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
+        f"* For additional information about the dataset, please visit its "
+        f"source: [Dataset Cherry Leaves] "
+        f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
 
     st.success(
-        f"**Business requirements**\n\n"
+        f"**Project business requirements**\n\n"
         f" The project has two business requirements:\n"
         f"* The client is interested in conducting a study to visually "
         f"differentiate a cherry leaf that is healthy from one that contains "
         f"powdery mildew.\n"
         f"* The client is interested in predicting if a cherry leaf is "
         f"healthy or contains powdery mildew.")
+
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README Document] "
+        f"(https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
