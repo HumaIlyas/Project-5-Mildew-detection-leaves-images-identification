@@ -15,11 +15,14 @@ def page_mildew_detector_content():
     Contents of Mildew Detection
     """
     st.write("### Mildew Detection")
+
+    # Second business requirement
     st.info(
         f"**Business Requirement 2** \n"
         f"* The client is interested in predicting if a cherry leaf is "
         f"healthy or contains powdery mildew.")
 
+    # Link to download a set of healthy and mildew contained cherry leaves
     st.write(
         f"* You can download a set of healthy and mildew contained cherry "
         f"leaves for live prediction. "
@@ -29,13 +32,15 @@ def page_mildew_detector_content():
 
     st.write("---")
 
+    # Upload of cherry leaf image samples for live predictions
     st.write(
-        f" **Upload Cherry Leaf image samples for live predictions. You may "
+        f" **Upload cherry leaf image samples for live predictions. You may "
         f"select more than one.**")
 
     images_buffer = st.file_uploader(' ',
                                      accept_multiple_files=True)
 
+    # Button to make live prediction
     st.write(
         f" For prediction results click on the **Make Live Prediction** "
         f"button")
@@ -48,7 +53,6 @@ def page_mildew_detector_content():
 def make_live_prediction(images_buffer):
     """
     Function to upload images and make live predictions
-
     """
     if images_buffer is not None:
         df_report = pd.DataFrame([])
@@ -69,6 +73,7 @@ def make_live_prediction(images_buffer):
             df_report = df_report.append({"Name": image.name,
                                          'Result': pred_class},
                                          ignore_index=True)
+
         # Table with the image name and prediction results
         # Download button to download the analysis
         if not df_report.empty:

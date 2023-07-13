@@ -44,6 +44,7 @@ def page_ml_performance_metrics_content():
         f"curve.\n"
         f"* The model is neither overfitting nor underfitting.")
 
+    # To display plots for graphical representation
     col1, col2 = st.beta_columns(2)
     with col1:
         model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
@@ -59,7 +60,7 @@ def page_ml_performance_metrics_content():
     st.dataframe(pd.DataFrame(load_test_evaluation(version),
                  index=['Loss', 'Accuracy']))
 
+    # The success message about the model performance
     st.success(
-        f"**The general accuracy of ML model is 99.29%!!** "
-    )
+        f"**The general accuracy of ML model is 99.29%!!** ")
     load_test_evaluation(version)

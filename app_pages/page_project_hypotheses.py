@@ -6,7 +6,10 @@ def page_project_hypotheses_content():
     Contents of Project Hypotheses
     """
     st.write("### Project Hypotheses, Validation Methods, and Conclusions")
+
     st.write("#### Hypothesis 1")
+
+    # Information about hypothesis 1
     st.info(
         f" I suspect that mildew-contained cherry leaves have clear signs on "
         f"their surface to differentiate them from the uninfected leaves. \n\n"
@@ -23,7 +26,10 @@ def page_project_hypotheses_content():
         f"have greenish smooth surface. \n"
         f"* Nevertheless, the difference between averages studies did not "
         f"reveal any clear pattern to differentiate one from another.")
+
     st.write("#### Hypothesis 2")
+
+    # Information about hypothesis 2
     st.info(
         f" I suggest that images of mildew-contained cherry leaves will have "
         f"several differences compared with uninfected leaves in order to "
@@ -37,7 +43,10 @@ def page_project_hypotheses_content():
         f"* ML model performance was evaluated and it differentiates a mildew "
         f"contained leaf and a healthy leaf with at least 97% accuracy in "
         f"both the train and test sets.")
+
     st.write("#### Hypothesis 3")
+
+    # Information about hypothesis 3
     st.info(
         f" I suggest that binary classification will be the best method to "
         f"determine the difference between infected and uninftected leaves, "

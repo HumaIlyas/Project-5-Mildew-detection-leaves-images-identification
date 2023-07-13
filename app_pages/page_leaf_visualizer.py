@@ -41,12 +41,12 @@ def page_leaf_visualizer_content():
         st.image(avg_mildew, caption='Infected Leaf - Average and Variability')
         st.write("---")
 
-    # Checkbox for the differences between average healthy and infected Leaves
+    # Checkbox for the differences between average healthy and infected leaves
     if st.checkbox("Differences between average healthy and average "
-                   "infected Leaves."):
+                   "infected leaves."):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
-        # Success message
+        # Differences between average healthy and infected leaves
         st.success(
             f"* A similar pattern of colour pigment of the average images is "
             f"seen for both labels, as mildew contained leaves have clear "
@@ -64,17 +64,20 @@ def page_leaf_visualizer_content():
         st.write("* To refresh the montage, click on the 'Create Montage' "
                  "button")
 
-        # Information message
+        # Information about image montage
         st.info(
             f" The image montage helps to visually differentiate between "
             f"mildew contained and healthy leaves. Mildew contained leaves "
             f"have clear white powdery spots on the surface and healthy "
             f"leaves have greenish smooth surface.")
 
+        # Select label for image montage
         my_data_dir = 'inputs/mildew_dataset/cherry-leaves'
         labels = os.listdir(my_data_dir + '/validation')
         label_to_display = st.selectbox(label="Select label", options=labels,
                                         index=0)
+
+        # Button to create image montage
         if st.button("Create Montage"):
             image_montage(dir_path=my_data_dir + '/validation',
                           label_to_display=label_to_display,
@@ -84,12 +87,12 @@ def page_leaf_visualizer_content():
 
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
     """
-    Create image montage
+    Function to create image montage
     """
     sns.set_style("white")
     labels = os.listdir(dir_path)
 
-    # subset the class to display
+    # Subset the class to display
     if label_to_display in labels:
 
         # Check if montage space is greater than subset size
@@ -104,12 +107,12 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
                 f"You requested a montage with {nrows * ncols} spaces")
             return
 
-        # create list of axes indices based on nrows and ncols
+        # Create list of axes indices based on nrows and ncols
         list_rows = range(0, nrows)
         list_cols = range(0, ncols)
         plot_idx = list(itertools.product(list_rows, list_cols))
 
-        # create a Figure and display images
+        # Create a Figure and display images
         fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
         for x in range(0, nrows*ncols):
             img = imread(dir_path + '/' + label_to_display + '/' + img_idx[x])

@@ -3,7 +3,8 @@ import streamlit as st
 
 class DashBoard:
     """
-    Class to generate multiple Streamlit pages using an object oriented approach
+    Class to generate multiple streamlit pages using an object oriented
+    approach
     """
 
     def __init__(self, app_name) -> None:
@@ -19,7 +20,9 @@ class DashBoard:
         self.pages.append({"title": title, "function": func})
 
     def run(self):
-        """Set title and menu names"""
+        """
+        Set title and menu names
+        """
         st.title(self.app_name)
         page = st.sidebar.radio(
             'Menu', self.pages, format_func=lambda page: page['title'])

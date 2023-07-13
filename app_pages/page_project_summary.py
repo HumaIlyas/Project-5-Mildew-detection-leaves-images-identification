@@ -37,6 +37,7 @@ def page_project_summary_content():
         f"source: [Dataset Cherry Leaves] "
         f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
 
+    # Project business requirements
     st.success(
         f"**Project business requirements**\n\n"
         f" The project has two business requirements:\n"
@@ -46,6 +47,7 @@ def page_project_summary_content():
         f"* The client is interested in predicting if a cherry leaf is "
         f"healthy or contains powdery mildew.")
 
+    # Link for additional information
     st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README Document] "
