@@ -27,8 +27,8 @@ def page_project_summary_content():
     # Information about project dataset
     st.warning(
         f"**Project Dataset**\n\n"
-        f" The available dataset contains 4+ thousand images of cherry "
-        f"leaves taken from the client's crop fields: \n"
+        f" The available dataset contains more than 4 thousand images of "
+        f"cherry leaves taken from the client's crop fields: \n"
         f"* The images dataset has been split evenly with healthy and mildew "
         f"contained cherry leaves. \n"
         f"* 2104 images of cherry leaves which are healthy \n"

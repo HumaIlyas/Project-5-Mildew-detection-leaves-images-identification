@@ -2,6 +2,9 @@
 
 ## Powdery Mildew Detection in Cherry Leaves
 Powdery Mildew Detection in Cherry Leaves is a study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew, and also the capability to predict if a cherry leaf is healthy or contains powdery mildew. [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is a fungal disease that affects a wide range of plants, and is caused by many different species of ascomycete fungi in the order Erysiphales. Powdery mildew is one of the easier plant diseases to identify, as its symptoms are quite distinctive. Infected plants display white powdery spots on the leaves and stems.
+
+## Powdery Mildew Detector 
+Powdery Mildew Detector is an app that can predict based on an image of a cherry leaf, whether it is healthy or infected with powdery mildew. This app is designed based on a supervised, single-label, binary classification machine learning model. Binary classifier is used to predict the outcome.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/different-screen-sizes.jpg" alt="App on different screen sizes">
 </div>
@@ -12,6 +15,7 @@ Powdery Mildew Detection in Cherry Leaves is a study showing how to visually dif
 ## Table of contents
 - [Powdery Mildew Detection](#powdery-mildew-detection)
   - [Powdery Mildew Detection in Cherry Leaves](#powdery-mildew-detection-in-cherry-leaves)
+  - [Powdery Mildew Detector](#powdery-mildew-detector)
   - [Dataset Content](#dataset-content)
   - [Business Requirements](#business-requirements)
   - [Hypotheses and Validation Methods](#hypotheses-and-validation-methods)
@@ -36,6 +40,9 @@ The main contents of the dataset are disussed in this section.
 
 - The dataset is taken from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves), and it is provided by Code Institute for the purpose of this portfolio project. I have created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 - The dataset contains more than 4 thousand images taken from the client's crop fields. About 50% of the images show healthy cherry leaves and 50% of the images show the cherry leaves containing powdery mildew. Powdery mildew a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio; therefore, the company is concerned about supplying the market with a compromised quality product.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/dataset.jpg" alt="Dataset">
+</div>
 
 ## Business Requirements
 The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
@@ -96,15 +103,19 @@ This page will provide general information about the project, dataset used for d
   - Currently, the process is to manually verify if a given cherry tree contains powdery mildew or not. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or contains powdery mildew.
 - **Project Dataset**
   - The available dataset contains more than 4 thousand images of cherry leaves taken from the client's crop fields:
+  - The images dataset has been split evenly with healthy and mildew contained cherry leaves
   - 2104 images of cherry leaves which are healthy
   - 2104 images of cherry leaves containing powdery mildew
-  - For additional information about the dataset, please visit [Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
+  - For additional information about the dataset, please visit its source [Dataset Cherry Leaves](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
 - **Business requirements**
   The project has two business requirements:<br>
   - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
   - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 - **Link to additional information**
   - Link will be provided for the additional information about the project.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/project-summary.jpg" alt="Project summary">
+</div>
 
 ### Leaf Visualiser
 This page will provide the details for the answer to business requirement 1- "The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew."<br>
@@ -112,6 +123,9 @@ This page will provide the details for the answer to business requirement 1- "Th
 - Checkbox 1 - Difference between average and variability image
 - Checkbox 2 - Differences between average infected and average uninfected leaves.
 - Checkbox 3 - Image Montage
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/leaf-visualiser.jpg" alt="Leaf Visualiser">
+</div>
 
 ### Mildew Detection
 This page will provide information about business requirement 2- "The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."<br>
@@ -120,16 +134,25 @@ This page will provide information about business requirement 2- "The client is 
 - User Interface with a file uploader widget. The user should upload multiple leaf sample images. It will display the image and a prediction statement, indicating if the leaf is infected or not with powdery mildew and the probability associated with this statement.
 - Table with image name and prediction results.
 - Download button to download table.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/mildew-detection.jpg" alt="Mildew Detection">
+</div>
 
 ### Project Hypotheses
-This page will provide block for the three project hypotheses, conclusions, and methods used to validate the hypotheses.
+This page will provide blocks for the three project hypotheses, conclusions, and methods used to validate the hypotheses.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/project-hypotheses.jpg" alt="Project Hypotheses">
+</div>
 
 ### ML Performance Metrics
 This page will provide the details for the answer to business requirement 2.<br>
 
 - Label Frequencies for Train, Validation, and Test Sets
 - Model History - Accuracy and Losses
-- Model evaluation result
+- Model Evaluation Result
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/ml-performance-metrics.jpg" alt="ML Performance Metrics">
+</div>
 
 ---
 # Issues found during app development and deployment

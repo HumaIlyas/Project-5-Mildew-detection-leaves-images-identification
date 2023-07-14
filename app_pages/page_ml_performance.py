@@ -62,5 +62,5 @@ def page_ml_performance_metrics_content():
 
     # The success message about the model performance
     st.success(
-        f"**The general accuracy of ML model is 99.29%!!** ")
+        f"**The general accuracy of ML model is 99.29%!!**")
     load_test_evaluation(version)

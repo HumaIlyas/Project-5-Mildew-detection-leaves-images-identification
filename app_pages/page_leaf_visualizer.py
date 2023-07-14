@@ -15,6 +15,7 @@ def page_leaf_visualizer_content():
     Contents of Leaf Visualiser
     """
     st.write("### Leaf Visualiser")
+    # First business requirement
     st.info(
         f"**Business Requirement 1** \n"
         f"* The client is interested in conducting a study to visually "
