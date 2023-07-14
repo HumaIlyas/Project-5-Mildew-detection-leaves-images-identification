@@ -9,7 +9,7 @@ from app_pages.page_project_hypotheses import page_project_hypotheses_content
 from app_pages.page_ml_performance import page_ml_performance_metrics_content
 
 # Create an instance of the app
-app = DashBoard(app_name="Mildew Detector")
+app = DashBoard(app_name="Powdery Mildew Detector")
 
 # Add app pages using .add_page()
 app.add_page("Project Summary", page_project_summary_content)
