@@ -41,7 +41,10 @@ The main contents of the dataset are disussed in this section.
 - The dataset is taken from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves), and it is provided by Code Institute for the purpose of this portfolio project. I have created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 - The dataset contains more than 4 thousand images taken from the client's crop fields. About 50% of the images show healthy cherry leaves and 50% of the images show the cherry leaves containing powdery mildew. Powdery mildew a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio; therefore, the company is concerned about supplying the market with a compromised quality product.
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="images/dataset.jpg" alt="Dataset">
+    <img src="images/dataset-healthy-leaves.jpg" alt="Dataset healthy leaves">
+</div>
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/dataset-mildew-leaves.jpg" alt="Dataset mildew leaves">
 </div>
 
 ## Business Requirements
@@ -126,16 +129,33 @@ This page will provide the details for the answer to business requirement 1- "Th
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/leaf-visualiser.jpg" alt="Leaf Visualiser">
 </div>
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/average-variability-image.jpg" alt="Average and variability image">
+</div>
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/average-infected-uninfected-leaves.jpg" alt="Average infected and uninfected leaves">
+</div>
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/image-montage-healthy-leaves.jpg" alt="Image montage healthy leaves">
+</div>
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/image-montage-mildew-leaves.jpg" alt="Image montage mildew leaves">
+</div>
 
 ### Mildew Detection
 This page will provide information about business requirement 2- "The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."<br>
 
 - Link to download a set of infected and uninfected leaves for live prediction.
 - User Interface with a file uploader widget. The user should upload multiple leaf sample images. It will display the image and a prediction statement, indicating if the leaf is infected or not with powdery mildew and the probability associated with this statement.
-- Table with image name and prediction results.
-- Download button to download table.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/mildew-detection.jpg" alt="Mildew Detection">
+</div>
+
+- Table with image name and prediction results.
+- Download button to download table.
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/live-predictions.jpg" alt="Live predictions">
 </div>
 
 ### Project Hypotheses
@@ -146,12 +166,33 @@ This page will provide blocks for the three project hypotheses, conclusions, and
 
 ### ML Performance Metrics
 This page will provide the details for the answer to business requirement 2.<br>
-
-- Label Frequencies for Train, Validation, and Test Sets
-- Model History - Accuracy and Losses
-- Model Evaluation Result
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/ml-performance-metrics.jpg" alt="ML Performance Metrics">
+</div>
+
+- Label Frequencies for Train, Validation, and Test Sets
+    - Train - healthy: 1472 images
+    - Train - powdery_mildew: 1472 images
+    - Validation - healthy: 210 images
+    - Validation - powdery_mildew: 210 images
+    - Test - healthy: 422 images
+    - Test - powdery_mildew: 422 images
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/label-frequencies.jpg" alt="Label frequencies">
+</div>
+
+- Model History - Accuracy and Losses
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/model-history.jpg" alt="Model history">
+</div>
+
+- Model Evaluation Result
+    - The agreed accuracy criteria for the ML model performance with the client is atleast 97% accuracy. 
+    - The generalized performance of the app is 99.29%.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/model-evaluation-result.jpg" alt="Model evaluation result">
 </div>
 
 ---
@@ -221,18 +262,18 @@ Different technologies were used to complete the contents of Powdery Mildew Dete
 ---
 # Data Analysis and Machine Learning Libraries
 Main list of the libraries used in the project of Powdery Mildew Detection and some examples of how these libraries were used is provided below.
-* **Numpy:** It is an open-source, python library used for working with arrays. NumPy offers comprehensive mathematical functions, random number generators, linear algebra routines.
-* **Pandas:** It is an open-source, python package used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data.
-* **Matplotlib:** It is a cross-platform, data visualization and graphical plotting library for python.
-* **Seaborn:** It is Python data visualization library based on Matplotlib. It will be used to visualize random distributions.
-* **Plotly:** It is an interactive, open-soource, and browser-based gra6. Tensorflow: It is an open-sourec machine learning platform focused on deep neural networks.phing library. Used to create visualisations within Jupyter notebooks to present the data.
-* **Streamlit:** It is used to create web apps for data science and machine learnin
-* **Scikit-learn:**
+* **Numpy:** It is a general-purpose array-processing package, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions.
+* **Pandas:** It is an open-source, python package used for working with data sets. It has functions for analyzing, cleaning, exploring, manipulating, and visualizing data.
+* **Matplotlib:** It is a cross-platform, data visualization and graphical plotting library for python. This provides the capability to plot any data structure, while using minimum memory and cpu in any tool.
+* **Seaborn:** It is Python data visualization library, which offers a built in themes for styling matplotlib graphics. It will be used to visualize random distributions. 
+* **Plotly:** It is a data visualization library written in JavaScript, making graphs inherently interactive.
+* **Streamlit:** It is used to create web apps for data science and machine learning.
+* **Scikit-learn:** It is used to train machine learning models for classification.
 * **Tensorflow:** It is an open-source machine learning platform focused on deep neural networks.
-* **Keras:**
-* **Keras-tuner:** is used to to create Keras tuning model for hyperparameter optimization
-* **Protobuf:**
-* **Joblib:** It is a set of tools to provide lightweighting pipelining in Python.
+* **Keras:** It is an open-source library that provides a Python interface for artificial neural networks. It acts as an interface for the TensorFlow library.
+* **Keras-tuner:** It is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search.
+* **Protobuf:** Protocol Buffers is a free and open-source cross-platform data format used to serialize structured data. It is useful in developing programs to communicate with each other over a network or for storing data.
+* **Joblib:** It is a set of tools to provide lightweight pipelining in Python.
 * **PIL:** Python Imaging Library is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats.
 
 ---
