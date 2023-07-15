@@ -35,7 +35,7 @@ def page_project_summary_content():
         f"* 2104 images of cherry leaves containing powdery mildew \n"
         f"* For additional information about the dataset, please visit its "
         f"source: [Dataset Cherry Leaves] "
-        f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
+        f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)")
 
     # Project business requirements
     st.success(
@@ -50,5 +50,7 @@ def page_project_summary_content():
     # Link for additional information
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README Document] "
-        f"(https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification/blob/main/README.md).")
+        f"[Project README Document]"
+        f"(https://github.com/HumaIlyas/"
+        f"Project-5-Mildew-detection-leaves-images-identification/blob/"
+        f"main/README.md)")

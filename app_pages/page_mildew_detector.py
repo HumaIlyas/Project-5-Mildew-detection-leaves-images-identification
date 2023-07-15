@@ -27,7 +27,7 @@ def page_mildew_detector_content():
         f"* You can download a set of healthy and mildew contained cherry "
         f"leaves for live prediction. "
         f"You can download the images from "
-        f"[kaggle] "
+        f"[Images Cherry Leaves] "
         f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)")
 
     st.write("---")
@@ -62,7 +62,8 @@ def make_live_prediction(images_buffer):
             st.info(f"Cherry Leaf Sample Image: **{image.name}**")
             img_array = np.array(img_pil)
             st.image(
-                img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
+                img_pil, caption=f"Image Size: {img_array.shape[1]}px width x \
+                {img_array.shape[0]}px height")
 
             version = 'v1'
             resized_img = resize_input_image(img=img_pil, version=version)
