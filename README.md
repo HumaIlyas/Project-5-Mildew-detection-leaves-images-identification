@@ -151,7 +151,7 @@ This page will provide the details for the answer to business requirement 1- "Th
 - Checkbox 2 - Differences between average infected and average uninfected leaves.
 - Checkbox 3 - Image Montage
 <div style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="images/leaf-visualiser.jpg" alt="Leaf Visualiser">
+    <img src="images/leaf-visualizer.jpg" alt="Leaf Visualizer">
 </div>
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/average-variability-image.jpg" alt="Average and variability image">
@@ -265,7 +265,7 @@ Codeanywhere was used as a development environment where all the changes were co
 ## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
 
 ---
-# Technologies used
+# Technologies Used
 Different technologies were used to complete the contents of Powdery Mildew Detector.
 
 ### GitHub
