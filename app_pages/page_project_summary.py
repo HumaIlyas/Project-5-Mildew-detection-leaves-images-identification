@@ -39,7 +39,7 @@ def page_project_summary_content():
 
     # Project business requirements
     st.success(
-        f"**Project business requirements**\n\n"
+        f"**Project Business Requirements**\n\n"
         f" The project has two business requirements:\n"
         f"* The client is interested in conducting a study to visually "
         f"differentiate a cherry leaf that is healthy from one that contains "

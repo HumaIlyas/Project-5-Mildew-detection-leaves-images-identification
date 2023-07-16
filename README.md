@@ -21,16 +21,17 @@ Powdery Mildew Detector is an app that can predict based on an image of a cherry
   - [Hypotheses and Validation Methods](#hypotheses-and-validation-methods)
   - [The Rationale to Map the Business Requirements](#the-rationale-to-map-the-business-requirements)
   - [ML Business Case](#ml-business-case)
+  - [Goals and User Stories](#goals-and-user-stories)
   - [Dashboard Design](#dashboard-design)
     - [Project Summary](#project-summary)
-    - [Leaf Visualiser](#leaf-visualiser)
+    - [Leaf Visualizer](#leaf-visualizer)
     - [Mildew Detection](#mildew-detection)
     - [Project Hypotheses](#project-hypotheses)
     - [ML Performance Metrics](#ml-performance-metrics)
-- [Issues found during app development and deployment](#issues-found-during-site-development-and-deployment)
-- [Unfixed bugs](#unfixed-bugs)
+- [Issues Found During App Development and Deployment](#issues-found-during-site-development-and-deployment)
+- [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
-- [Technologies used](#technologies-used)
+- [Technologies Used](#technologies-used)
 - [Data Analysis and Machine Learning Libraries](#data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
 
@@ -57,14 +58,14 @@ The business requirements are:<br>
 2 - The client is interested in predicting if a cherry tree is healthy or contains powdery mildew.
 
 ## Hypotheses and Validation Methods
-Project hypotheses and the methods to validate them are described below. The detailed validation process will be displayed in the dashboad.<br>
+Project hypotheses and the methods to validate them are described below. The detailed validation process will be displayed in the dashboard.<br>
 1- I suspect that mildew-contained cherry leaves have clear signs on their surface to differentiate them from the uninfected leaves.
 
 - An average image and varability image study can help to investigate it.
 
 2- I suggest that images of mildew-contained cherry leaves will have several differences compared with uninfected leaves in order to train the model with an image dataset.
 
-- The dataset will be analysed using train, validation, and test techniques to investigate the accuracy of image identification.
+- The dataset will be analysed using train, validation, and test techniques to investigate the accuracy of Powdery Mildew Detection.
 
 3- I suggest that binary classification will be the best method to determine the difference between infected and uninftected leaves, considering that the sample dataset contains images classified as infected and uninfected leaves.
 
@@ -72,8 +73,8 @@ Project hypotheses and the methods to validate them are described below. The det
 - The images will be uploaded in the dashboard to determine the difference between infected and uninftected leaves. 
 
 ## The Rationale to Map the Business Requirements
-### The rationale to map the business requirements to the Data Visualisations and ML tasks
-The business requirements of image identification and a rationale to map them to the Data Visualisations and ML tasks are provided below.
+### The rationale to map the business requirements to the Data Visualisations and ML Tasks
+The business requirements of Powdery Mildew Detection and a rationale to map them to the Data Visualisations and ML Tasks are provided below.
 
 - **Business Requirement 1**: Data Visualization
   - I will display the "mean" and "standard deviation" images for infected and uninfected leaves.
@@ -86,20 +87,43 @@ The business requirements of image identification and a rationale to map them to
 
 ## ML Business Case
 - I want a ML model to predict if a leaf is infected with powdery mildew or not, based on historical image data. It is a supervised model, a 2-class, single-label, classification model.
-- My ideal outcome is provide the Farmy foods team a faster method of determining if a plant is infected with powdery mildew or not.
+- My ideal outcome is to provide the Farmy foods team a faster method of determining if a plant is infected with powdery mildew or not.
 - The model success metrics are:
   - Accuracy of 97% on the train set as well as on the test set.
 - The model output is defined as a flag, indicating if the leaf is infected with powdery mildew or not and the associated probability of being infected or not. The Farmy foods staff will do the inspection of the leaf as usual and upload the picture to the App. The prediction is made on the fly (not in batches).
 - **Heuristics:** Currently, the process is to manually verify if a given cherry tree contains powdery mildew or not. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. Although the staff require some training to detect the occurrance of disease in detail, the image analysis, sample collection, and processing will be faster and could be performed by staff with less expertise.
-- The training data to fit the model come from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). This dataset contains about +4 thousand images.
+- The training data to fit the model come from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). This dataset contains about more than 4 thousand images.
   - Train data - target: infected or not; features: all images.
 
+## Goals and User Stories
+### As a data practitioner/app user
+* As a data practitioner I must ensure that the data collected is sufficient enough so that it is fit for data analysis.
+* As a data practitioner I must ensure that the data is of good quality so that there are no non-image files in the image dataset.
+* As a data practitioner I must ensure that the images are of proper size so that I can easily push files to GitHub.
+* As a data practitioner I must ensure that I make plots so that I can distinguish between healthy and powdery mildew contained leaves.
+* As a data practitioner I must ensure that the model for both train and test sets has an accuracy of at least 97% so that I can meet the client requirements.
+
+### As a app user
+* As a app user I want a project summary page so that I can briefly view the information about the project including the dataset used and business requirements.
+* As a app user I want a leaf visualization page so that I can visually differentiate a cherry leaf if it is healthy or mildew contained.
+* As a app user I want to download a set of cherry leaves so that I can make live predictions.
+* As a app user I want to upload multiple image files so that I can check whether the given cherry leaf is healthy or mildew contained.
+* As a app user I want a table with the image name and prediction results, and a download button to download the table so that I can check whether the given cherry leaf is healthy or mildew contained and save a table for records.
+* As a app user I want a page indicating project hypotheses and validation methods so that I can see the approach used to meet the business requirements.
+* As a app user I want a technical page displaying model performance so that I can see the accuracy of predictions.
+* As a app user I want the model or dashboard to be deployed in a user-friendly interface so that it is intuitive.
+
 ## Dashboard Design
+The design of the dashboard of Powdery Mildew Detector was planned considering the goals and user stories of data practitioners and app users. The dashboard is consisted of five pages, which are provided in the flowchart.
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <img src="images/dashboard-design.jpg" alt="Dashboard-design ">
+</div>
+
 ## Streamlit App User Interface
 The dashboard of Powdery Mildew Detector is consisted of five pages, which are detailed below.
 
 ### Project Summary
-This page will provide general information about the project, dataset used for data visualization and prediction, link for the additional information, and business requirements.
+This page will provide general information about the project, dataset used for data visualization and prediction, business requirements, and link for the additional information.
 
 - **General Information**
   - [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew) is a fungal disease that affects a wide range of plants, and can result in a low fruit yield in the case of Cherry Trees. This disease is caused by many different species of ascomycete fungi in the order Erysiphales. Powdery mildew is one of the easier plant diseases to identify, as its symptoms are quite distinctive. Infected plants display white powdery spots on the leaves and stems.
@@ -110,17 +134,17 @@ This page will provide general information about the project, dataset used for d
   - 2104 images of cherry leaves which are healthy
   - 2104 images of cherry leaves containing powdery mildew
   - For additional information about the dataset, please visit its source [Dataset Cherry Leaves](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
-- **Business requirements**
+- **Project Business Requirements**<br>
   The project has two business requirements:<br>
   - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
   - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
-- **Link to additional information**
+- **Link to Additional Information**
   - Link will be provided for the additional information about the project.
 <div style="margin-top: 20px; margin-bottom: 20px;">
     <img src="images/project-summary.jpg" alt="Project summary">
 </div>
 
-### Leaf Visualiser
+### Leaf Visualizer
 This page will provide the details for the answer to business requirement 1- "The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew."<br>
 
 - Checkbox 1 - Difference between average and variability image
@@ -196,7 +220,7 @@ This page will provide the details for the answer to business requirement 2.<br>
 </div>
 
 ---
-# Issues found during app development and deployment
+# Issues Found During App Development and Deployment
 The following issues were found during app development and deployment<br>
 - To deploy Powdery Mildew Detector on Heroku, the stack by default did not support the Python version used to develop the app.<br>
 I adjusted this issue:
@@ -292,7 +316,7 @@ To complete the contents of Powdery Mildew Detection: Powdery Mildew Detection i
 - The details about the powdery mildew were found at [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew)
 
 ## Acknowledgements
-- I acknowledge all the tutors and fellow students at [Slack](https://app.slack.com/client/T0L30B202/D03PENWED0F) for their guidance and assistance to complete Image Identification.
+- I acknowledge all the tutors and fellow students at [Slack](https://app.slack.com/client/T0L30B202/D03PENWED0F) for their guidance and assistance to complete Powdery Mildew Detection.
 - I acknowledge [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for mentor support and finishing touches.
 
 [Back to Table of contents](#table-of-contents)

@@ -12,9 +12,9 @@ import random
 
 def page_leaf_visualizer_content():
     """
-    Contents of Leaf Visualiser
+    Contents of Leaf Visualizer
     """
-    st.write("### Leaf Visualiser")
+    st.write("### Leaf Visualizer")
     # First business requirement
     st.info(
         f"**Business Requirement 1** \n"
