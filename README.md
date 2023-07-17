@@ -219,6 +219,8 @@ This page will provide the details for the answer to business requirement 2.<br>
     <img src="images/model-evaluation-result.jpg" alt="Model evaluation result">
 </div>
 
+[Back to Table of contents](#table-of-contents)
+
 ---
 # Issues Found During App Development and Deployment
 The following issues were found during app development and deployment<br>
@@ -234,8 +236,6 @@ I adjusted this issue:
 # Unfixed Bugs
 
 - There are no unfixed bugs
-
-[Back to Table of contents](#table-of-contents)
 
 ---
 # Deployment
@@ -299,6 +299,8 @@ Main list of the libraries used in the project of Powdery Mildew Detection and s
 * **Protobuf:** Protocol Buffers is a free and open-source cross-platform data format used to serialize structured data. It is useful in developing programs to communicate with each other over a network or for storing data.
 * **Joblib:** It is a set of tools to provide lightweight pipelining in Python.
 * **PIL:** Python Imaging Library is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats.
+
+[Back to Table of contents](#table-of-contents)
 
 ---
 # Credits
