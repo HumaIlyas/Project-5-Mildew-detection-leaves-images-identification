@@ -34,7 +34,7 @@ def page_leaf_visualizer_content():
             f"variability images is seen for both labels. Mildew contained "
             f"leaves have clear white powdery spots on the surface, whereas "
             f"healthy leaves have greenish smooth surface. \n"
-            f"* However the average and variability images did not show any "
+            f"* However, the average and variability images did not show any "
             f"clear patterns that could intuitively differentiate healthy "
             f"leaves from the mildew contained leaves.")
 

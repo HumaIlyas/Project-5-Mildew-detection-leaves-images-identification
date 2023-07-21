@@ -50,12 +50,12 @@ def page_project_hypotheses_content():
     # Information about hypothesis 3
     st.info(
         f" I suggest that binary classification will be the best method to "
-        f"determine the difference between infected and uninftected leaves, "
+        f"determine the difference between infected and uninfected leaves, "
         f"considering that the sample dataset contains images classified as "
         f"infected and uninfected leaves. \n\n"
         f"**Validation method** \n"
         f"* The binary classification will be done to determine the "
-        f"difference between infected and uninftected leaves. \n\n"
+        f"difference between infected and uninfected leaves. \n\n"
         f"**Conclusions** \n"
         f"* The difference between healthy and mildew-contained cherry leaves "
         f"was well determined using binary classification.")
