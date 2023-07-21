@@ -73,8 +73,8 @@ Project hypotheses and the methods to validate them are described below. The det
 - The images will be uploaded in the dashboard to determine the difference between infected and uninftected leaves. 
 
 ## The Rationale to Map the Business Requirements
-### The rationale to map the business requirements to the Data Visualisations and ML Tasks
-The business requirements of Powdery Mildew Detection and a rationale to map them to the Data Visualisations and ML Tasks are provided below.
+### The rationale to map the business requirements to the Data Visualizations and ML Tasks
+The business requirements of Powdery Mildew Detection and a rationale to map them to the Data Visualizations and ML Tasks are provided below.
 
 - **Business Requirement 1**: Data Visualization
   - I will display the "mean" and "standard deviation" images for infected and uninfected leaves.
